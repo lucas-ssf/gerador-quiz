@@ -1,0 +1,250 @@
+/* Estilo Medieval - Quiz */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #fff8dc;
+    color: #4a3728;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: linear-gradient(135deg, #fdf6e3 0%, #f5ebcd 100%);
+    border: 8px double #8b4513;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), inset 0 0 50px rgba(139, 69, 19, 0.1);
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid #cd853f;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #8b4513;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 3px;
+    border-bottom: 4px double #8b4513;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Esconder inputs radio reais */
+input[type="radio"][name="tab"],
+input[type="radio"][name="q1"],
+input[type="radio"][name="q2"],
+input[type="radio"][name="q3"],
+input[type="radio"][name="q4"],
+input[type="radio"][name="q5"],
+input[type="radio"][name="q6"],
+input[type="radio"][name="q7"] {
+    display: none;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tabs label {
+    padding: 12px 20px;
+    background: linear-gradient(to bottom, #8b4513, #654321);
+    color: #f5deb3;
+    border: 3px solid #654321;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 50px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tabs label:hover {
+    background: linear-gradient(to bottom, #a0522d, #754c24);
+    transform: translateY(-2px);
+}
+
+/* Tabs ativas - efeito visual */
+#t1:checked ~ .tabs label[for="t1"],
+#t2:checked ~ .tabs label[for="t2"],
+#t3:checked ~ .tabs label[for="t3"],
+#t4:checked ~ .tabs label[for="t4"],
+#t5:checked ~ .tabs label[for="t5"],
+#t6:checked ~ .tabs label[for="t6"],
+#t7:checked ~ .tabs label[for="t7"] {
+    background: linear-gradient(to bottom, #f5deb3, #daa520);
+    color: #4a3728;
+    border-color: #4a3728;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    background: #fffae5;
+    border: 4px solid #8b4513;
+    border-radius: 0 0 8px 8px;
+    padding: 30px;
+    min-height: 200px;
+    box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.15);
+}
+
+.page {
+    display: none;
+}
+
+/* Mostrar página selecionada */
+#t1:checked ~ .content .q1,
+#t2:checked ~ .content .q2,
+#t3:checked ~ .content .q3,
+#t4:checked ~ .content .q4,
+#t5:checked ~ .content .q5,
+#t6:checked ~ .content .q6,
+#t7:checked ~ .content .q7 {
+    display: block;
+}
+
+.page p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #4a3728;
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+    background: rgba(205, 133, 63, 0.1);
+    border-left: 5px solid #8b4513;
+    border-right: 5px solid #8b4513;
+}
+
+.opt {
+    margin-bottom: 15px;
+}
+
+.opt input[type="radio"] {
+    display: none;
+}
+
+.opt label {
+    display: block;
+    padding: 18px 20px;
+    background: #fff8dc;
+    border: 3px solid #cd853f;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    color: #4a3728;
+    margin-bottom: 12px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.opt label:hover {
+    background: #f5deb3;
+    border-color: #8b4513;
+    transform: translateX(5px);
+}
+
+/* Marcações quando selecionado - sem bolinhas visíveis */
+#q1A:checked + label,
+#q1B:checked + label,
+#q1C:checked + label,
+#q1D:checked + label,
+#q2A:checked + label,
+#q2B:checked + label,
+#q2C:checked + label,
+#q2D:checked + label,
+#q3A:checked + label,
+#q3B:checked + label,
+#q3C:checked + label,
+#q3D:checked + label,
+#q4A:checked + label,
+#q4B:checked + label,
+#q4C:checked + label,
+#q4D:checked + label,
+#q5A:checked + label,
+#q5B:checked + label,
+#q5C:checked + label,
+#q5D:checked + label,
+#q6A:checked + label,
+#q6B:checked + label,
+#q6C:checked + label,
+#q6D:checked + label,
+#q7A:checked + label,
+#q7B:checked + label,
+#q7C:checked + label,
+#q7D:checked + label {
+    background: linear-gradient(to right, #daa520, #f5deb3);
+    border-color: #8b4513;
+    border-width: 4px;
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.6), inset 0 0 10px rgba(139, 69, 19, 0.2);
+    font-weight: bold;
+}
+
+.opt label::before {
+    content: '☞';
+    position: absolute;
+    left: 15px;
+    color: #8b4513;
+    font-size: 1.3rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.opt label:hover::before,
+.opt input:checked + label::before {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tabs label {
+        padding: 10px 15px;
+        font-size: 1rem;
+        flex-basis: 40%;
+    }
+    
+    .page p {
+        font-size: 1.1rem;
+    }
+    
+    .opt label {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+}
