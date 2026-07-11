@@ -4,7 +4,7 @@ Aplicação em Flask para gerar Quiz com IA.
 
 ## Como rodar
 
-Definir a chave da sua API do [Marketplace](docs.github.com/en/github-models/quickstart)
+Definir a chave da sua API do [Marketplace](https://docs.github.com/en/github-models/quickstart)
 
     export API_KEY=insira-aqui-sua-chave
 
