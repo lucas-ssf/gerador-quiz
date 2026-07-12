@@ -138,14 +138,14 @@
 <body>
     <div class="container">
         <h3>Gerar quiz</h3>
-        <form method="post">
+        <form method="post" onsubmit="this.disabled=true;">
             
             
 
             <label for="texto">Insira o texto:</label>
             <textarea id="texto" name="texto" rows="8"></textarea>
+            <input type="submit" value="Enviar" onclick="this.value='Enviando...'; this.style.background='#808080';"> 
 
-            <input type="submit" value="Enviar">
         </form>
     </div>
 </body>
