@@ -3,7 +3,5 @@
 !preparar.py
 !app.py
 !secrets.py
-!templates/
 !templates/*.html
-!static/
-!static/**
+!static/*.css
