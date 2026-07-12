@@ -63,6 +63,8 @@ Texto:
 """
 
 def gerar_quiz(texto):
+    if not texto or not texto.strip():
+        return None
     content = inicio_prompt
     content += texto
     payload = {

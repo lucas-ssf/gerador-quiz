@@ -1,7 +1,10 @@
 import json
 
 def criar_html(quiz_json):
-    quiz = json.loads(quiz_json)['quiz']
+    try:
+        quiz = json.loads(quiz_json)['quiz']
+    except:
+        return <html><p>Um erro ocorreu, tente novamente!</p></html>
     html = """
     <!DOCTYPE html>
     <html lang="pt-BR">
