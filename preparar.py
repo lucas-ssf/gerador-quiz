@@ -48,6 +48,7 @@ def criar_html(quiz_json):
     html += html_content
     html += """
         </div>
+        <a href="/" class="btn-voltar">⟵ Voltar ao Início</a>
     </div>
     
     </body>

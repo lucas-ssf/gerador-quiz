@@ -216,3 +216,27 @@ input[type="radio"][name="q7"] {
         font-size: 1rem;
     }
 }
+
+.btn-voltar {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 30px;
+    background: linear-gradient(to bottom, #8b4513, #654321);
+    color: #f5deb3;
+    border: 3px solid #654321;
+    border-radius: 8px;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(to bottom, #a0522d, #754c24);
+    transform: translateY(-2px);
+    color: #fff;
+}
