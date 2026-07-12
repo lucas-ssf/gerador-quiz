@@ -173,9 +173,26 @@ input[type="radio"][name="q7"] {
     transform: translateX(5px);
 }
 
-#q1T:checked + label, #q2T:checked + label, #q3T:checked + label, #q4T:checked + label, #q5T:checked + label, #q6T:checked + label, #q7T:checked + label { background: linear-gradient(to right, #2e7d32, #66bb6a); border-color: #1b5e20; color: #ffffff; box-shadow: 0 0 15px rgba(46, 125, 50, 0.6), inset 0 0 10px rgba(27, 94, 32, 0.2); font-weight: bold; }
+#q1T:checked + label, #q2T:checked + label, #q3T:checked + label, 
+#q4T:checked + label, #q5T:checked + label, #q6T:checked + label, #q7T:checked + label { 
+    background: linear-gradient(to right, #2e7d32, #66bb6a); 
+    border-color: #1b5e20; color: #ffffff; 
+    box-shadow: 0 0 15px rgba(46, 125, 50, 0.6), inset 0 0 10px rgba(27, 94, 32, 0.2); 
+    font-weight: bold; 
+}
 
-#q1A:checked + label, #q1B:checked + label, #q1C:checked + label, #q1D:checked + label, #q2A:checked + label, #q2B:checked + label, #q2C:checked + label, #q2D:checked + label, #q3A:checked + label, #q3B:checked + label, #q3C:checked + label, #q3D:checked + label, #q4A:checked + label, #q4B:checked + label, #q4C:checked + label, #q4D:checked + label, #q5A:checked + label, #q5B:checked + label, #q5C:checked + label, #q5D:checked + label, #q6A:checked + label, #q6B:checked + label, #q6C:checked + label, #q6D:checked + label, #q7A:checked + label, #q7B:checked + label, #q7C:checked + label, #q7D:checked + label { background: linear-gradient(to right, #c62828, #ef5350); border-color: #b71c1c; color: #ffffff; box-shadow: 0 0 15px rgba(198, 40, 40, 0.6), inset 0 0 10px rgba(183, 28, 28, 0.2); font-weight: bold; }
+#q1A:checked + label, #q1B:checked + label, #q1C:checked + label, #q1D:checked + label, 
+#q2A:checked + label, #q2B:checked + label, #q2C:checked + label, #q2D:checked + label, 
+#q3A:checked + label, #q3B:checked + label, #q3C:checked + label, #q3D:checked + label, 
+#q4A:checked + label, #q4B:checked + label, #q4C:checked + label, #q4D:checked + label, 
+#q5A:checked + label, #q5B:checked + label, #q5C:checked + label, #q5D:checked + label, 
+#q6A:checked + label, #q6B:checked + label, #q6C:checked + label, #q6D:checked + label, 
+#q7A:checked + label, #q7B:checked + label, #q7C:checked + label, #q7D:checked + label { 
+    background: linear-gradient(to right, #c62828, #ef5350); 
+    border-color: #b71c1c; 
+    color: #ffffff; box-shadow: 0 0 15px rgba(198, 40, 40, 0.6), inset 0 0 10px rgba(183, 28, 28, 0.2); 
+    font-weight: bold; 
+}
 
 .opt label::before {
     content: '☞';
