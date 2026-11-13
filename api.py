@@ -1,12 +1,10 @@
 import requests
 from secrets import api_key
 
-url = "https://models.github.ai/inference/chat/completions"
+url = "https://api.groq.com/openai/v1/chat/completions"
 
 headers = {
-    "Accept": "application/vnd.github+json",
     "Authorization": f"Bearer {api_key}",
-    "X-GitHub-Api-Version": "2022-11-28",
     "Content-Type": "application/json"
 }
 
@@ -68,7 +66,7 @@ def gerar_quiz(texto):
     content = inicio_prompt
     content += texto
     payload = {
-        "model": "openai/gpt-4.1",
+        "model": "openai/gpt-oss-120b",
         "messages": [
             {
                 "role": "user",
